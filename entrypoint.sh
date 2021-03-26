@@ -1,11 +1,11 @@
 #!/bin/sh
 
 exportFiles() {
-  if [ -n "$EXPORT_JSON" ]; then
+  if [ -n "$INPUT_EXPORT_JSON" ]; then
     echo "export json"
     tiled --export-map json "$1" "$(echo $1 | cut -f1 -d.).json"
   fi
-  if [ -n "$EXPORT_PNG" ]; then
+  if [ -n "$INPUT_EXPORT_PNG" ]; then
     echo "export png"
     tmxrasterizer "$1" "$(echo $1 | cut -f1 -d.).png"
   fi
