@@ -9,4 +9,4 @@ exportFiles() {
   fi
 }
 
-xvfb-run find . -name "$PATTERN" -exec sh -c 'exportFiles "$0" {}' \;
+xvfb-run find /github/workspace -name "$PATTERN" -exec sh -c 'exportFiles "$0" {}' \;
