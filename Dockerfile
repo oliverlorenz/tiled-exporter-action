@@ -5,4 +5,5 @@ RUN apt update && \
     rm -rf /var/cache/apt/archives
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
+WORKDIR /github/workspace
 ENTRYPOINT /entrypoint.sh

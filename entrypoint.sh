@@ -2,11 +2,13 @@
 
 exportFiles() {
   if [ -n "$EXPORT_JSON" ]; then
+    echo "export json"
     tiled --export-map json "$1" "$(echo $1 | cut -f1 -d.).json"
   fi
   if [ -n "$EXPORT_PNG" ]; then
+    echo "export png"
     tmxrasterizer "$1" "$(echo $1 | cut -f1 -d.).png"
   fi
 }
 
-xvfb-run find /github/workspace -name "$PATTERN" -exec sh -c 'exportFiles "$0" {}' \;
+xvfb-run find . -name "$PATTERN" -exec sh -c 'exportFiles "$0" {}' \;
