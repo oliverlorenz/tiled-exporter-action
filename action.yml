@@ -1,0 +1,21 @@
+name: tiled-exporter
+description: Exports tmx files to png and/or json
+author: Oliver Lorenz
+inputs:
+  export_json:
+    description: "export json version of tmx file"
+    required: false
+  export_png:
+    description: "export png version of tmx file"
+    required: false
+  pattern:
+    description: "export png version of tmx file"
+    default: "*.tmx"
+    required: false
+  
+runs:
+  using: docker
+  image: 'Dockerfile'
+branding:
+  icon: 'message-square'
+  color: 'blue'
