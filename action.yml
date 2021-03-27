@@ -2,15 +2,14 @@ name: tiled-exporter
 description: Exports tmx files to png and/or json
 author: Oliver Lorenz
 inputs:
+  tmx_file:
+    description: "tmx file to convert"
+    required: true
   export_json:
     description: "export json version of tmx file"
     required: false
   export_png:
     description: "export png version of tmx file"
-    required: false
-  pattern:
-    description: "export png version of tmx file"
-    default: "*.tmx"
     required: false
   
 runs:
