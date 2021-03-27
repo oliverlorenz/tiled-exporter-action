@@ -1,6 +1,6 @@
 #!/bin/sh
 
-exportFiles() {
+function exportFiles {
   if [ -n "$INPUT_EXPORT_JSON" ]; then
     echo "export json"
     tiled --export-map json "$1" "$(echo $1 | cut -f1 -d.).json"
