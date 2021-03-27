@@ -11,7 +11,7 @@ exportFiles () {
   fi
 }
 
-xvfb-run find . -name "$INPUT_PATTERN" -exec sh -c '
+xvfb-run find /github/workspace -name "$INPUT_PATTERN" -exec sh -c '
 
   exportFiles () {
     if [ -n "$INPUT_EXPORT_JSON" ]; then
