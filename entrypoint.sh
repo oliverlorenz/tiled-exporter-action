@@ -9,5 +9,5 @@ if [ -n "$INPUT_EXPORT_JSON" ]; then
 fi
 if [ -n "$INPUT_EXPORT_PNG" ]; then
   echo "export png"
-  xvfb-run --auto-servernum tmxrasterizer "${TMX_FILE}" '$(echo ${TMX_FILE} | cut -f1 -d.).png'
+  xvfb-run --auto-servernum tmxrasterizer "${TMX_FILE}" $(echo ${TMX_FILE} | cut -f1 -d.).png
 fi
